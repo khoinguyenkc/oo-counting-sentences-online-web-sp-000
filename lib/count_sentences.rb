@@ -107,7 +107,7 @@ def clearmulti(string, piecetoremove)
   return [string, cuts]
 end
 puts "landmark"
-puts thisstuff = clearmulti("nothingtocuthere!sdfsdf?fsfsf???", "???")
+puts thisstuff = clearmulti("nothingtocuthere!sdfsdf?fsfsf???fadfd???dfs fdsfds???", "???")
 puts "how many cuts: #{thisstuff[1]}"
 #it's counting but its MISCOUNTING by one extra. !!!!!!!
 
