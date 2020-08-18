@@ -74,7 +74,7 @@ class String
      marks.each do | mark |
        #apparently self still refer to object, not array.
        result = self.clearmulti(copyofstring, mark)
-       binding.pry
+       #binding.pry
        copyofstring = result[0]
        tally += result[1]
      end
