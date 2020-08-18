@@ -94,7 +94,7 @@ puts "landmark"
 #it's counting but its MISCOUNTING by one extra. !!!!!!!
 
 something = "whatever is good! is also bad!!! somewhere else... i think."
-something.count_sentences
+puts something.count_sentences
 
 
 #puts otherstuff = clearmulti(thisstuff[0], "?")
