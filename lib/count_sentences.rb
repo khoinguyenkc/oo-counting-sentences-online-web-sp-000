@@ -81,7 +81,7 @@ def clearmulti(string, piecetoremove)
     #binding.pry
     if counter < 1 #aka first time only
 
-      if string == original string #if no change
+      if string == originalstring #if no change
         return [string, 0]
       else
         cuts += 1
