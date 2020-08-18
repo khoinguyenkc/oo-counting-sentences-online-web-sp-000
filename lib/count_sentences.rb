@@ -51,7 +51,7 @@ class String
           #binding.pry
           cuts += 1
           lateststring = string.dup #making a value copy
-          binding.pry
+          #binding.pry
         end
 
       end
