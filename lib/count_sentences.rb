@@ -69,8 +69,8 @@ class String
      tally = 0
      copyofstring = self.dup
 
-     #marks = ["???", "??", "?", "...", "..", ".", "!!!", "!!", "!"]
-     marks = ["???"]
+     marks = ["???", "??", "?", "...", "..", ".", "!!!", "!!", "!"]
+     #marks = ["???"]
      marks.each do | mark |
        #apparently self still refer to object, not array.
        result = self.clearmulti(copyofstring, mark)
@@ -118,7 +118,7 @@ def clearmulti(string, piecetoremove)
         #binding.pry
         cuts += 1
         lateststring = string.dup #making a value copy
-        binding.pry
+        #binding.pry
       end
 
     end
