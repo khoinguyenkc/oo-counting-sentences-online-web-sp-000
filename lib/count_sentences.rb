@@ -23,20 +23,39 @@ class String
   end
 
   def clearmulti(string, piecetoremove)
+    originalstring = string.dup
     lateststring = ""
     cuts = 0
-
+    counter = 0
     loop do
+
       string.slice! piecetoremove
-      if string == lateststring
-        #no need to add cuts here, if string == lateststring, then the last slice was useless
-        break
-      else
-        cuts += 1
-        lateststring = string.dup #making a value copy
+      #binding.pry
+      if counter < 1 #aka first time only
+
+        if string == originalstring #if no change
+          return [string, 0]
+        else
+          cuts += 1
+          lateststring = string.dup
+          counter +=1
+        end
+
+      else #2nd time on
+
+        if string == lateststring
+          #binding.pry
+          #no need to add cuts here, if string == lateststring, then the last slice was useless
+          break
+        else
+          #binding.pry
+          cuts += 1
+          lateststring = string.dup #making a value copy
+          binding.pry
+        end
+
       end
     end #end loop
-
     return [string, cuts]
   end
 
@@ -107,13 +126,13 @@ def clearmulti(string, piecetoremove)
   return [string, cuts]
 end
 puts "landmark"
-puts thisstuff = clearmulti("nothingtocuthere!sdfsdf?fsfsf???fadfd???dfs fdsfds???", "???")
-puts "how many cuts: #{thisstuff[1]}"
+#puts thisstuff = clearmulti("nothingtocuthere!sdfsdf?fsfsf???fadfd???dfs fdsfds???", "???")
+#puts "how many cuts: #{thisstuff[1]}"
 #it's counting but its MISCOUNTING by one extra. !!!!!!!
 
 #problem: when theres nothing to cut, it still returns one. cuz the first time! it adds 1.
-#something = "whatever is good! is also bad!!! somewhere else... i think."
-#puts something.count_sentences
+something = "whatever is good! is also bad!!! ???somewhere else... i think."
+puts something.count_sentences
 
 
 #puts otherstuff = clearmulti(thisstuff[0], "?")
