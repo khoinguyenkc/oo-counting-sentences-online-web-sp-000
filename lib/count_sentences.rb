@@ -52,7 +52,7 @@ class String
 
      marks = ["???", "??", "?", "...", "..", ".", "!!!", "!!", "!"]
      marks.each do | mark |
-       #apparently self still refer to object, not array. 
+       #apparently self still refer to object, not array.
        result = self.clearmulti(copyofstring, mark)
        copyofstring = result[0]
        tally += result[1]
