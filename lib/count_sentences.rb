@@ -52,11 +52,10 @@ class String
 
      marks = ["???", "??", "?", "...", "..", ".", "!!!", "!!", "!"]
      marks.each do | mark |
-       #nots ure what the slef would refer to here. it's called inside an iterated array. dont want to self to be the array
-       #result = self.clearmulti(copyofstring, mark)
-       #copyofstring = result[0]
-       #tally += result[1]
-       self.buddy
+       #apparently self still refer to object, not array. 
+       result = self.clearmulti(copyofstring, mark)
+       copyofstring = result[0]
+       tally += result[1]
      end
 
      tally
