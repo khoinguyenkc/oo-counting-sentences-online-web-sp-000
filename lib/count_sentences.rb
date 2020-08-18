@@ -82,7 +82,7 @@ def clearmulti(string, piecetoremove)
     if counter < 1 #aka first time only
 
       if string == original string #if no change
-        return [string, 0] 
+        return [string, 0]
       else
         cuts += 1
         lateststring = string.dup
@@ -90,7 +90,7 @@ def clearmulti(string, piecetoremove)
       end
 
     else #2nd time on
-      
+
       if string == lateststring
         #binding.pry
         #no need to add cuts here, if string == lateststring, then the last slice was useless
@@ -100,9 +100,9 @@ def clearmulti(string, piecetoremove)
         cuts += 1
         lateststring = string.dup #making a value copy
         binding.pry
-      end 
-      
-    end  
+      end
+
+    end
   end #end loop
   return [string, cuts]
 end
